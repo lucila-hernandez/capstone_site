@@ -3,14 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
     <title>Good Eats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Good Eats</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a> <!-- Link updated here -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ideas.html">Ideas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="goto.html">Go To</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to Good Eats!</h1>
+            <p>Explore new food ideas and recipes every day.</p>
+            <a href="ideas.html" class="btn btn-light btn-lg">Get Started</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="container py-5">
+        <h2>About Us</h2>
+        <p>We provide food ideas for every occasion, from quick snacks to elaborate meals. Whether you're a beginner or a seasoned chef, we've got something for you!</p>
+    </section>
+
+    <!-- Featured Content -->
+    <section class="container py-5">
+        <h2>Featured Recipes</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Easy Pasta</h5>
+                        <p class="card-text">A quick and delicious pasta recipe for any occasion.</p>
+                        <a href="#" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Veggie Stir-Fry</h5>
+                        <p class="card-text">A healthy and colorful stir-fry perfect for dinner.</p>
+                        <a href="#" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Chocolate Cake</h5>
+                        <p class="card-text">Indulge in a rich and moist chocolate cake.</p>
+                        <a href="#" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-light py-5 text-center">
+        <h3>Join Our Community</h3>
+        <p>Share your favorite recipes, try new dishes, and inspire others!</p>
+        <a href="ideas.html" class="btn btn-primary">Explore Recipes</a>
+    </section>
+
+    <!-- Footer-->
+    <footer class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h5>Good Eats</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="ideas.html" class="text-white">Ideas</a></li>
+                        <li><a href="goto.html" class="text-white">Go To</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Links -->
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-white me-3" target="_blank">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" target="_blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                        <a href="#" class="text-white" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Copyright Section -->
+                <div class="col-md-4">
+                    <p>&copy; 2024 Good Eats. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
