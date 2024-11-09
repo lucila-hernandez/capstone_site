@@ -6,20 +6,22 @@
     <title>Good Eats</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Good Eats</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/food.png" alt="Good Eats Logo" class="me-2"> Good Eats
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto"> 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a> <!-- Link updated here -->
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ideas.html">Ideas</a>
@@ -31,58 +33,153 @@
             </div>
         </div>
     </nav>
+    
+    
+    <!-- Hero Section-->
+    <div class="position-relative overflow-hidden vh-100">
+        <img src="images/hero_background.jpg" class="position-absolute w-100 h-100 object-fit-cover" alt="Background Image">
+        <div class="position-absolute w-100 h-100 bg-dark opacity-50"></div> 
+        <header class="d-flex justify-content-center align-items-center text-white text-center w-100 h-100 position-relative">
+            <div class="container">
+                <h1 class="display-3 fw-bold">Welcome to Good Eats!</h1>
+                <p class="lead mb-4">Explore new food ideas and recipes every day.</p>
+                <a href="ideas.html" class="btn btn-light btn-lg shadow">Get Started</a>
+            </div>
+        </header>
+    </div>
 
-    <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Welcome to Good Eats!</h1>
-            <p>Explore new food ideas and recipes every day.</p>
-            <a href="ideas.html" class="btn btn-light btn-lg">Get Started</a>
+    <!-- About Section-->
+    <section class="container pt-5 py-1">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>Welcome to Good Eats – your ultimate destination for discovering new recipes and exploring exciting food ideas! Whether you're looking for quick, easy meals or something more elaborate to impress your guests, we've got something for every occasion.</p>
+                <p>Our goal is to help you when you're standing in front of the fridge, wondering, "What should I make today?" Whether you’re a beginner or a seasoned chef, Good Eats offers inspiration, creativity, and flavor-packed recipes to suit every taste and skill level.</p>
+                <h3>Explore New Recipes</h3>
+                <p>At Good Eats, we believe food should be an adventure. Our collection of recipes is constantly growing, with fresh ideas to help you step outside your culinary comfort zone. From weeknight dinners to holiday feasts, we’ve got a recipe for every craving and dietary need.</p>
+                <h3>Get Inspired When You Don’t Know What to Eat</h3>
+                <p>We all have those days when we're just not sure what to cook. That’s why Good Eats is here to give you new ideas, tips, and recipes that inspire you to try something different. No more stress about meal planning or feeling uninspired — you can always find something new and exciting to make!</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/about_section.png" class="img-fluid" alt="About Us">
+            </div>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section class="container py-5">
-        <h2>About Us</h2>
-        <p>We provide food ideas for every occasion, from quick snacks to elaborate meals. Whether you're a beginner or a seasoned chef, we've got something for you!</p>
     </section>
-
-    <!-- Featured Content -->
+    
+    <!-- Carousel -->
     <section class="container py-5">
         <h2>Featured Recipes</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Easy Pasta</h5>
-                        <p class="card-text">A quick and delicious pasta recipe for any occasion.</p>
-                        <a href="#" class="btn btn-primary">View Recipe</a>
+        <div id="featuredRecipesCarousel" class="carousel slide" data-bs-ride="carousel">            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#featuredRecipesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#featuredRecipesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#featuredRecipesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/pasta.jpg" class="card-img-top w-100 h-100" alt="Recipe 1">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Easy Pasta</h5>
+                                    <p class="card-text">A quick and delicious pasta recipe for any occasion.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/veggie_stirfry.jpg" class="card-img-top w-100 h-100" alt="Recipe 2">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Veggie Stir-Fry</h5>
+                                    <p class="card-text">A healthy and colorful stir-fry perfect for dinner.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/chocolate_cake.jpg" class="card-img-top w-100 h-100" alt="Recipe 3">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Chocolate Cake</h5>
+                                    <p class="card-text">Indulge in a rich and moist chocolate cake.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <!-- Card 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/spaghetti_bolognese.jpg" class="card-img-top w-100 h-100" alt="Recipe 4">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Spaghetti Bolognese</h5>
+                                    <p class="card-text">A rich and savory pasta dish with a classic meat sauce.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/grilled_chicken.jpg" class="card-img-top w-100 h-100" alt="Recipe 5">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Grilled Chicken</h5>
+                                    <p class="card-text">Perfectly grilled chicken served with fresh vegetables.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="images/banana_bread.jpg" class="card-img-top w-100 h-100" alt="Recipe 6">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Banana Bread</h5>
+                                    <p class="card-text">A delicious and moist banana bread recipe for any occasion.</p>
+                                    <a href="#" class="btn btn-primary">View Recipe</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Veggie Stir-Fry</h5>
-                        <p class="card-text">A healthy and colorful stir-fry perfect for dinner.</p>
-                        <a href="#" class="btn btn-primary">View Recipe</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Recipe 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Chocolate Cake</h5>
-                        <p class="card-text">Indulge in a rich and moist chocolate cake.</p>
-                        <a href="#" class="btn btn-primary">View Recipe</a>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Carousel controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredRecipesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredRecipesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
+
+
+
 
     <!-- Call to Action -->
     <section class="bg-light py-5 text-center">
@@ -92,7 +189,7 @@
     </section>
 
     <!-- Footer-->
-    <footer class="bg-dark text-white text-center py-5">
+    <footer class="bg-black text-white text-center pt-5 pb-2">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-md-4">
@@ -104,7 +201,6 @@
                     </ul>
                 </div>
     
-                <!-- Social Media Links -->
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
                     <div>
@@ -120,7 +216,6 @@
                     </div>
                 </div>
     
-                <!-- Copyright Section -->
                 <div class="col-md-4">
                     <p>&copy; 2024 Good Eats. All Rights Reserved.</p>
                 </div>
